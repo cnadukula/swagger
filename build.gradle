@@ -1,0 +1,40 @@
+buildscript {
+    ext {
+        lombok = "1.18.12"
+        springFox = "2.9.2"
+        springBoot = "2.3.3.RELEASE"
+    }
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'com.example.Application'
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    compileOnly "org.projectlombok:lombok:${lombok}"
+
+    implementation "io.springfox:springfox-swagger2:${springFox}"
+    implementation "io.springfox:springfox-swagger-ui:${springFox}"
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBoot}"
+    implementation "org.springframework.boot:spring-boot-starter-actuator:${springBoot}"
+
+    annotationProcessor "org.projectlombok:lombok:${lombok}"
+
+    testCompile "junit:junit:4.12"
+}
