@@ -1,4 +1,4 @@
-#Sample Swagger Application
+# Sample Swagger Application
 
 ### How to run the application
 
